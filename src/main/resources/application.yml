@@ -1,0 +1,32 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: milo-backend
+  datasource:
+    url: jdbc:postgresql://ep-proud-mode-axsne85c-pooler.c-4.us-east-2.aws.neon.tech:5432/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_IXpDi0T9hWcB
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      idle-timeout: 30000
+      max-lifetime: 600000
+      connection-timeout: 30000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+milo:
+  jwt:
+    secret: 9a4f2c8d7e1b5a3f9e8d7c6b5a4f3e2d1c0b9a8f7e6d5c4b3a2f1e0d9c8b7a6f
+    expiration-ms: 86400000
