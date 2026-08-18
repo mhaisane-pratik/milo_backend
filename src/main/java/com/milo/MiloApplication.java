@@ -10,4 +10,3 @@ public class MiloApplication {
         System.out.println("🚀 MILO Spring Boot Backend is running on http://localhost:8080/api");
     }
 }
--------------
